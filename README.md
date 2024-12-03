@@ -129,7 +129,7 @@ The specs for "token-send" are defined as follows:
 - "token-send" is atomic upon inscribing (before tapping): all amounts, tickers and addresses must be syntactically valid.
 - Upon tapping, invalid and semantically incorrect token sends must be skipped (e.g. insufficient funds, invalid amounts or invalid data types).
 - Each successful token send must credit the given amounts to recipient and be removed from the sender's balance.
-- Each send item must exclusively operate on available balances, not overall balances (available = balance - transferable). [added Aug. 8th, 2023]
+- Each send item must exclusively operate on available balances, not overall balances (available = balance - transferable).
 
 #### Example
 
@@ -292,7 +292,7 @@ Example:
 ```
 
 - The "auth" attribute must contain an array of deployed TAP protocol tokens that are verified for the authority's account.
-- If the "auth" attribute's array is empty, all tokens owned by the authority's account are authorized [added Sep. 25th, 2023]
+- If the "auth" attribute's array is empty, all tokens owned by the authority's account are authorized.
 - Upon indexing, the token-auth inscription must be verified against the signature ("sig"), "hash" attribute and public key.
 - - The public key must be recovered by using "hash".
   - To prevent hash collisions, a custom "salt" value has to be provided by the authority.
