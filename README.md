@@ -17,8 +17,6 @@ To get connected to TAP, marketplaces/wallets clone their existing DRC-20 infras
 
 Users benefit from features such as token staking and swaps. Mass-sending of tokens are already available. The community will decide through the use of $TRAC (BRC-20) which features will be added or updated.
 
-Alongside the specs, there is already TAP protocol tracking available on https://trac.network. 
-
 Developers may use the [TAP Reader](https://github.com/Trac-Systems/tap-reader) and use the TAP for Doge channel in order to get indexed data and create applications for the protocol
 
 Protocol updates will be announced in advance - with a reasonable grace-period - to allow indexers to follow.
