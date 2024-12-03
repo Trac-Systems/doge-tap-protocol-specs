@@ -197,10 +197,7 @@ As soon as the inscription above is inscribed, the trade is open and ready to be
 - The tokens defined in the "accept" attribute must be deployed in the moment of filling the trade by a buyer.
 - The block specified in the "valid" attribute must be a future block (inclusive).
 - The trade is invalid and not being indexed if the current block is larger than "valid".
-- Up to block 824543 and if the offered token is cursed, then the inscription has to be inscribed as cursed.
 - Ticks within the "accept" attribute must be unique. Only the first must be indexed if there is more than one of the same.
-- Cursed tokens defined in the "accept" attribute have to be prefixed with a dash (this is to allow mixed cursed/non-cursed trading).
-- From block 824544 onwards, the offered token ticker has to be prefixed with a dash, if it originally has been deployed as cursed token.
 - After inscribing the function, sellers have to send the inscription to themselves to approve (tapping).
 
 #### Cancel a Trade
@@ -247,9 +244,6 @@ Valid trades are fillable by inscribing a token-trade inscription that specifies
 - The ticker must be deployed in order to get the above indexed.
 - The buyer must own the specified token and it's amount + 0.3% trading fees if the "fee_rcv" attribute is set.
 - If the "fee_rcv" attribute is set, it must be a valid Bitcoin address.
-- Upon indexing, the Bitcoin address in "fee_rcv" must be trimmed and lowercased if the address starts with "bc1".
-- Up to block 824543 and if the offered token is cursed, then the inscription has to be inscribed as cursed.
-- From block 824544 onwards, the "tick" attribute has to be prefixed with a dash, if it originally has been deployed as cursed token.
 - After inscribing the function, buyers have to send the inscription to themselves to approve (tapping).
 - If the current block upon tapping is larger than the block in the "valid" attribute as of the referenced trade, filling will fail.
 - If all conditions are met, the token and its exact amount is being sent to the seller and the offered token is being sent to the buyer. If fees apply, the fee will be sent to the fee receiver.
@@ -541,7 +535,7 @@ This can be used for blockouts, collection finalization etc.
 
 #### Dogemap
 
-The TAP Protocol indexer must properly index Dogemap as of the original specs, without cursed support.
+The TAP Protocol indexer must properly index Dogemap as of the original Bitmap specs (just using "dogemap" instead of "bitmap", rest accordingly).
 
 #### DMT (Doge Much Theory aka Digital Matter Theory) Tokens
 
