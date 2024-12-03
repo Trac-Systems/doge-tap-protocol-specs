@@ -27,7 +27,7 @@ As mentioned above, TAP tokens work in the exact same way as DRC-20 tokens. Ther
 
 || TAP | DRC-20 |
 |-------------| ------------- | ------------- |
-| Allowed ticker lengths | 3 and 5 to 32 symbols (Unicode) - 1 to 32 symbols from block 5,487,639  | 4-5 letters |
+| Allowed ticker lengths | 3 and 5 to 32 symbols (Unicode) - 1 to 32 symbols from block 5,487,639  | 4 letters |
 | Protocol | tap  | drc-20  |
 | Deploy op | token-deploy  | deploy  |
 | Mint op | token-mint  | mint  |
