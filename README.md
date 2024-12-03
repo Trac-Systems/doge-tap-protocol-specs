@@ -3,17 +3,15 @@ TAP is an extendible OrdFi-enabling protocol that includes - but is not limited 
 
 TAP works entirely without the use of L2s, but utilizes tapping - a simple mechanism to verify transactions within the protocol.
 
-The goal of TAP is to be the most powerful metaprotocol on top of Ordinals with a clear focus on Bitcoin L1. 
-
 TAP allows for new features that will be consistently added to the protocol by community driven governance.
 
 # Structure
 
-TAP consists of two parts, external and internal. The external part acts in the exact same way like BRC-20 does. 
+TAP consists of two parts, external and internal. The external part acts in the exact same way like DRC-20 does. 
 
 **External:**
 
-To get connected to TAP, marketplaces/wallets clone their existing BRC-20 infrastructure. Then either TAP's internal functions (see below) have to be implemented or endpoints that implement those have to be used to verify all balances (balance, available, transferable). From there on out, TAP tokens can be traded like regular BRC-20 tokens on their platforms. [updated Aug. 13th, 2023]
+To get connected to TAP, marketplaces/wallets clone their existing DRC-20 infrastructure. Then either TAP's internal functions (see below) have to be implemented or endpoints that implement those have to be used to verify all balances (balance, available, transferable). From there on out, TAP tokens can be traded like regular DRC-20 tokens on their platforms.
 
 **Internal:**
 
@@ -21,18 +19,18 @@ Users benefit from features such as token staking and swaps. Mass-sending of tok
 
 Alongside the specs, there is already TAP protocol tracking available on https://trac.network. 
 
-Trac's public endpoint (https://github.com/BennyTheDev/trac-tap-public-endpoint) allows developers to embrace the new standard. After the official release of Trac, developers may self-host TAP tracking and create their own endpoints.
+Developers may use the [TAP Reader](https://github.com/Trac-Systems/tap-reader) and use the TAP for Doge channel in order to get indexed data and create applications for the protocol
 
-Protocol updates will be announced in advance - with a reasonable grace-period - to allow indexers to follow. [added Aug. 13th, 2023]
+Protocol updates will be announced in advance - with a reasonable grace-period - to allow indexers to follow.
 
 # External
 
-As mentioned above, TAP tokens work in the exact same way as BRC-20 tokens. There are however a couple of minor modifications required for indexers:
+As mentioned above, TAP tokens work in the exact same way as DRC-20 tokens. There are however a couple of minor modifications required for indexers:
 
-|| TAP | BRC-20 |
+|| TAP | DRC-20 |
 |-------------| ------------- | ------------- |
 | Allowed ticker lengths | 3 and 5 to 32 symbols (Unicode) - 1 to 32 symbols from block 5,487,639  | 4-5 letters |
-| Protocol | tap  | brc-20  |
+| Protocol | tap  | drc-20  |
 | Deploy op | token-deploy  | deploy  |
 | Mint op | token-mint  | mint  |
 | Transfer op | token-transfer  | transfer  |
