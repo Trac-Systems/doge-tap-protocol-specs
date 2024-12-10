@@ -541,6 +541,8 @@ TAP Protocol supports elements field 4 (block height), 10 (nonce) and 11 (bits) 
 
 This includes the functions "dmt-deploy" and "dmt-mint" and work according to the DMT specs within the TAP Protocol.
 
+Note: Until block 5,497,099, field numbers and values of the mint's "blk" field are indexed based on the parseInt() rules as of Javascript. From block 5,497,100 onwards, the field number of new elements and the "blk" field in mints must be precise. [added Dec. 12th, 2024]
+
 #### Outlook
 
 This document and the tracking for the TAP protocol will be continuously worked on and updated. Feel free to join the Discord if you have questions: https://discord.gg/sPyYDa5q6P
